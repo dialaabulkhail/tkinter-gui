@@ -480,7 +480,7 @@ print()
 
 # print('HGSDC:MSISDN=962'+str(SNB)+',SUD=CFU-1;')
 # print('HGSDC:MSISDN=962'+str(SNB)+',SUD=CSP-19;')
-print('HGSSI:MSISDN=962'+str(SNB)+',SS=CFS,BSG=TS10,FNUM="#13'+str(prefix)+str(SNB)+'",OFA=512;')
+# print('HGSSI:MSISDN=962'+str(SNB)+',SS=CFS,BSG=TS10,FNUM="#13'+str(prefix)+str(SNB)+'",OFA=512;')
 
 
 

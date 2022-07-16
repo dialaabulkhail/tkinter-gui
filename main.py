@@ -184,35 +184,24 @@ def fun(Route, SNB, MGW_Number, EXTP, PBX):
     routeLine = "EXROI:R="+str(RouteI)+"&"+str(RouteO)+",DETY=ADJI,FNC=3;"
     if SNB not in SNBs:
         huLine = "EXNSI:HU="+str(HU)+",SNB="+str(SNB)+",l=0;"
-    rtdma = "NTCOI:SNT=rtdma-" + \
-        str(RTDMA)+",sntv=2,mg="+str(mg)+",extp=2-2-"+str(EXTP)+";"
-    dev = "EXDUI:DEV=LIPRRMG-"+str(DEV1)+"&&-" + \
-        str(DEV31)+",SNT=rtdma-"+str(RTDMA), ";"
-    iid = "EXUAI:DEST="+str(DEST)+",DEV=LIPRRMG-" + \
-        str(DEV16)+",IID="+str(IID)+";"
+    rtdma = "NTCOI:SNT=rtdma-" + str(RTDMA)+",sntv=2,mg="+str(mg)+",extp=2-2-"+str(EXTP)+";"
+    dev = "EXDUI:DEV=LIPRRMG-"+str(DEV1)+"&&-" + str(DEV31)+",SNT=rtdma-"+str(RTDMA), ";"
+    iid = "EXUAI:DEST="+str(DEST)+",DEV=LIPRRMG-" + str(DEV16)+",IID="+str(IID)+";"
     rtdma2 = "DTDII:DIP="+str(RTDMA)+"DIP,SNT=rtdma-"+str(RTDMA)+";"
     pbx_snb = "IUPBI:PBX="+str(PBX)+",SNB="+str(SNB)+",REFP=2,PROTVAR=DSS1E;"
-    devs = "IUPDI:PBX="+str(PBX)+",DEV=LIPRRMG-"+str(DEV2) + \
-        "&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+";"
-    dev_snb_pbx = "IUPVi:PBX="+str(PBX)+",DEV=LIPRRMG-"+str(DEV2)+"&&-"+str(
-        DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+",SNB="+SNB+";"
-    pbx_dev = "IUPHI:PBX="+str(PBX)+",HG=1,DEV=LIPRRMG-"+str(DEV2) + \
-        "&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+";"
-    pbx = "IUPHC:PBX=" + \
-        str(PBX)+",BS=SPEECH-1&AUDIO-1&TPHY-1&UDI-1&FAX23-1,HT=0,HG=1;"
+    devs = "IUPDI:PBX="+str(PBX)+",DEV=LIPRRMG-"+str(DEV2) + "&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+";"
+    dev_snb_pbx = "IUPVi:PBX="+str(PBX)+",DEV=LIPRRMG-"+str(DEV2)+"&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+",SNB="+SNB+";"
+    pbx_dev = "IUPHI:PBX="+str(PBX)+",HG=1,DEV=LIPRRMG-"+str(DEV2) + "&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+";"
+    pbx = "IUPHC:PBX=" + str(PBX)+",BS=SPEECH-1&AUDIO-1&TPHY-1&UDI-1&FAX23-1,HT=0,HG=1;"
     snb = "IUSCC:SNB="+str(SNB)+",BS=AUDIO-1&TPHY-1&FAX23-1&UDI-1&SPEECH-1;"
-    snb2 = "IUSCC:SNB=" + \
-        str(SNB)+",PROP=CDPNL-4&CDPNMOD-4&FO-6&TGR-17&DDISRQ-0&REFPNT-2;"
+    snb2 = "IUSCC:SNB=" + str(SNB)+",PROP=CDPNL-4&CDPNMOD-4&FO-6&TGR-17&DDISRQ-0&REFPNT-2;"
     snb3 = "IUSCC:SNB="+str(SNB)+",SS=COLP-1&CLIP-1&UUS1-1;"
     rtdma3 = "NTBLE:SNT=rtdma-"+str(RTDMA)+";"
     rtdma4 = "DTBLE:DIP="+str(RTDMA)+"DIP;"
-    devs2 = "BLODI:DEV=LIPRRMG-" + \
-        str(DEV1)+"&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+";"
-    devs_router = "EXDRI:R="+str(RouteO)+"&"+str(RouteI)+",DEV=LIPRRMG-"+str(
-        DEV2)+"&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+";"
+    devs2 = "BLODI:DEV=LIPRRMG-" + str(DEV1)+"&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+";"
+    devs_router = "EXDRI:R="+str(RouteO)+"&"+str(RouteI)+",DEV=LIPRRMG-"+str(DEV2)+"&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+";"
     mgg = "IUMGI:DEV=LIPRRMG-"+str(DEV1), ",MGG="+str(MGG)+";"
-    devs3 = "BLODE:DEV=LIPRRMG-" + \
-        str(DEV1)+"&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+";"
+    devs3 = "BLODE:DEV=LIPRRMG-" + str(DEV1)+"&&-"+str(DEV15)+"&-"+str(DEV17)+"&&-"+str(DEV31)+";"
     rc = "ANRPI:RC="+str(RC)+",cch=no;"
     snb4 = "ANRSI:p01=1,sp=mm1,SNB="+str(SNB)+";"
     string = "ANRPE;"
@@ -246,17 +235,12 @@ def fun(Route, SNB, MGW_Number, EXTP, PBX):
     # THE SCRIPT OF EDA COMMANDS
     eda_snb = 'HGSDC:MSISDN=962'+str(SNB)+',SUD=CFU-1;'
     eda_snb2 = 'HGSDC:MSISDN=962'+str(SNB)+',SUD=CSP-19;'
-    eda_snb3 = 'HGSSI:MSISDN=962' + \
-        str(SNB)+',SS=CFS,BSG=TS10,FNUM="#13'+str(prefix)+str(SNB)+'",OFA=512;'
+    eda_snb3 = 'HGSSI:MSISDN=962' + str(SNB)+',SS=CFS,BSG=TS10,FNUM="#13'+str(prefix)+str(SNB)+'",OFA=512;'
+
+        
 
     # THE OUTPUT SCRIPT OF SPX COMMANDS  + MGW COMMANDS
-    output = routeLine + "\n" + huLine + "\n" + rtdma + "\n" + dev + "\n" + iid + "\n" + rtdma2 + "\n" + pbx_snb + "\n" + devs + "\n" + dev_snb_pbx + "\n" + pbx_dev + "\n" + pbx + "\n" + snb + "\n" + snb2 + "\n" + snb3 + "\n" + rtdma3 + "\n" + rtdma4 + "\n" + devs2 + "\n" + devs_router + "\n" + mgg + "\n" + devs3 + "\n" + rc + "\n" + snb4 + "\n" + string + "\n" + rc2 + "\n" + snb5 + "\n" + string2 + "\n" + string3 + "\n" + string4 + "\n" + prefix1 + "\n" + prefix2 + "\n" + string5 + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + 'ECHO"=====>> Creating Ds0Bundle #02#"' + "\n" + "CREATE" + \
-        "(" + "\n" + mse_slot + "\n" + pbx_mgw + "\n" + "moType  Ds0Bundle" + "\n" + "exception  none" + "\n" + "nrOfAttributes  3" + "\n" + pbx_mgw2 + "\n" + 'listOfTimeSlots Array Integer  1                16   ' + "\n" + 'tdmMode Boolean  "TRUE"' + "\n" + ")" + "\n" + 'ECHO"=====>> Creating Ds0Bundle #02#"' + "\n" + 'CREATE' + "\n" + "(" + "\n" + mse_slot_vs + "\n" + pbx_mgw3 + "\n" + "moType  Ds0Bundle" + "\n" + "exception  none" + "\n" + "nrOfAttributes  3" + "\n" + pbx_mgw4 + "\n" + 'listOfTimeSlots Array Integer  30 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 ' + "\n" + 'tdmMode Boolean  "TRUE"' + "\n" + ")" + "\n" + '//==================' + "\n" + 'ECHO"=====>> Creating TdmTermGrp #02#"' + "\n" + 'CREATE' + "\n" + "(" + "\n" + 'parent  "ManagedElement=1,MgwApplication=1"' + \
-        "\n" + pbx_mgw3 + "\n" + 'moType  TdmTermGrp' + "\n" + 'exception  none' + "\n" + 'nrOfAttributes  4' + "\n" + pbx_mgw4 + "\n" + 'ds0BundleMoRef Reference' + "\n" + msE_slot_vs2 + "\n" + pbX_mgw_5 + "\n" + 'partialFill Integer  "40"' + "\n" + ")" + "\n" + dchannel + "\n" + 'CREATE' + "\n" + \
-        "(" + "\n" + 'parent "ManagedElement=1,AccessSignalling=1"' + "\n" + pbx_mgw3 + "\n" + 'moType DChannelTp' + "\n" + 'exception none' + "\n" + 'nrOfAttributes 5' + "\n" + pbx_user + "\n" + mse_slot_vs3 + "\n" + mgw_iid + "\n" + \
-        'lapdSapProfileMoRef Ref "ManagedElement=1,AccessSignalling=1,LapdSapProfile=1"' + "\n" + 'lapdMoRef Ref "ManagedElement=1,AccessSignalling=1,Lapd=CTRL-24"' + \
-        "\n" + ")" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + \
-        eda_snb + "\n" + eda_snb2 + "\n" + eda_snb3 + "\n"
+    output = routeLine + "\n" + huLine + "\n" + rtdma + "\n" + dev + "\n" + iid + "\n" + rtdma2 + "\n" + pbx_snb + "\n" + devs + "\n" + dev_snb_pbx + "\n" + pbx_dev + "\n" + pbx + "\n" + snb + "\n" + snb2 + "\n" + snb3 + "\n" + rtdma3 + "\n" + rtdma4 + "\n" + devs2 + "\n" + devs_router + "\n" + mgg + "\n" + devs3 + "\n" + rc + "\n" + snb4 + "\n" + string + "\n" + rc2 + "\n" + snb5 + "\n" + string2 + "\n" + string3 + "\n" + string4 + "\n" + prefix1 + "\n" + prefix2 + "\n" + string5 + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + 'ECHO"=====>> Creating Ds0Bundle #02#"' + "\n" + "CREATE" + "(" + "\n" + mse_slot + "\n" + pbx_mgw + "\n" + "moType  Ds0Bundle" + "\n" + "exception  none" + "\n" + "nrOfAttributes  3" + "\n" + pbx_mgw2 + "\n" + 'listOfTimeSlots Array Integer  1                16   ' + "\n" + 'tdmMode Boolean  "TRUE"' + "\n" + ")" + "\n" + 'ECHO"=====>> Creating Ds0Bundle #02#"' + "\n" + 'CREATE' + "\n" + "(" + "\n" + mse_slot_vs + "\n" + pbx_mgw3 + "\n" + "moType  Ds0Bundle" + "\n" + "exception  none" + "\n" + "nrOfAttributes  3" + "\n" + pbx_mgw4 + "\n" + 'listOfTimeSlots Array Integer  30 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 ' + "\n" + 'tdmMode Boolean  "TRUE"' + "\n" + ")" + "\n" + '//==================' + "\n" + 'ECHO"=====>> Creating TdmTermGrp #02#"' + "\n" + 'CREATE' + "\n" + "(" + "\n" + 'parent  "ManagedElement=1,MgwApplication=1"' + "\n" + pbx_mgw3 + "\n" + 'moType  TdmTermGrp' + "\n" + 'exception  none' + "\n" + 'nrOfAttributes  4' + "\n" + pbx_mgw4 + "\n" + 'ds0BundleMoRef Reference' + "\n" + msE_slot_vs2 + "\n" + pbX_mgw_5 + "\n" + 'partialFill Integer  "40"' + "\n" + ")" + "\n" + dchannel + "\n" + 'CREATE' + "\n" + "(" + "\n" + 'parent "ManagedElement=1,AccessSignalling=1"' + "\n" + pbx_mgw3 + "\n" + 'moType DChannelTp' + "\n" + 'exception none' + "\n" + 'nrOfAttributes 5' + "\n" + pbx_user + "\n" + mse_slot_vs3 + "\n" + mgw_iid + "\n" + 'lapdSapProfileMoRef Ref "ManagedElement=1,AccessSignalling=1,LapdSapProfile=1"' + "\n" + 'lapdMoRef Ref "ManagedElement=1,AccessSignalling=1,Lapd=CTRL-24"' + "\n" + ")" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + eda_snb + "\n" + eda_snb2 + "\n" + eda_snb3 + "\n"
 
     script_text.insert("1.0", output)
     print(output)
