@@ -215,21 +215,17 @@ def fun(Route, SNB, MGW_Number, EXTP, PBX):
     string5 = "ANBAI;"
 
     # THE SCRIPT OF MGW COMMANDS
-    mse_slot = 'parent  "ManagedElement=1,Equipment=1,Subrack=MSE'+str(MSE)+',Slot='+str(
-        slot)+',PlugInUnit=1,ExchangeTerminal=1,Os155SpiTtp='+str(Os)+',Vc4Ttp=1,Vc12Ttp='+str(Vc)+',E1Ttp=1"'
+    mse_slot = 'parent  "ManagedElement=1,Equipment=1,Subrack=MSE'+str(MSE)+',Slot='+str(slot)+',PlugInUnit=1,ExchangeTerminal=1,Os155SpiTtp='+str(Os)+',Vc4Ttp=1,Vc12Ttp='+str(Vc)+',E1Ttp=1"'
     pbx_mgw = 'identity  "'+str(PBX)+'_Ds16"'
     pbx_mgw2 = 'userLabel String  "'+str(PBX)+'_Ds16"'
-    mse_slot_vs = 'parent  "ManagedElement=1,Equipment=1,Subrack=MSE'+str(MSE)+',Slot='+str(
-        slot)+',PlugInUnit=1,ExchangeTerminal=1,Os155SpiTtp='+str(Os)+',Vc4Ttp=1,Vc12Ttp='+str(Vc)+',E1Ttp=1"'
+    mse_slot_vs = 'parent  "ManagedElement=1,Equipment=1,Subrack=MSE'+str(MSE)+',Slot='+str(slot)+',PlugInUnit=1,ExchangeTerminal=1,Os155SpiTtp='+str(Os)+',Vc4Ttp=1,Vc12Ttp='+str(Vc)+',E1Ttp=1"'
     pbx_mgw3 = 'identity  "'+str(PBX)+'"'
     pbx_mgw4 = 'userLabel String  "'+str(PBX)+'"'
-    msE_slot_vs2 = '"ManagedElement=1,Equipment=1,Subrack=MSE'+str(MSE)+',Slot='+str(
-        slot)+',PlugInUnit=1,ExchangeTerminal=1,Os155SpiTtp='+str(Os)+',Vc4Ttp=1,Vc12Ttp='+Vc+',E1Ttp=1,Ds0Bundle='+str(PBX)+'"'
+    msE_slot_vs2 = '"ManagedElement=1,Equipment=1,Subrack=MSE'+str(MSE)+',Slot='+str(slot)+',PlugInUnit=1,ExchangeTerminal=1,Os155SpiTtp='+str(Os)+',Vc4Ttp=1,Vc12Ttp='+Vc+',E1Ttp=1,Ds0Bundle='+str(PBX)+'"'
     pbX_mgw_5 = 'pcmSystemNr Integer  "'+str(EXTP)+'"'
     dchannel = 'ECHO "===>> Creating DChannelTp '+str(DChannel)+'_D"'
     pbx_user = 'userLabel String "'+str(PBX)+'_D"'
-    mse_slot_vs3 = 'ds0BundleMoRef Ref "ManagedElement=1,Equipment=1,Subrack=MSE'+str(MSE)+',Slot='+str(
-        slot)+',PlugInUnit=1,ExchangeTerminal=1,Os155SpiTtp='+str(Os)+',Vc4Ttp=1,Vc12Ttp='+Vc+',E1Ttp=1,Ds0Bundle='+str(PBX)+'_Ds16"'
+    mse_slot_vs3 = 'ds0BundleMoRef Ref "ManagedElement=1,Equipment=1,Subrack=MSE'+str(MSE)+',Slot='+str(slot)+',PlugInUnit=1,ExchangeTerminal=1,Os155SpiTtp='+str(Os)+',Vc4Ttp=1,Vc12Ttp='+Vc+',E1Ttp=1,Ds0Bundle='+str(PBX)+'_Ds16"'
     mgw_iid = 'interfaceIdentifier Integer '+str(IID)
 
     # THE SCRIPT OF EDA COMMANDS
